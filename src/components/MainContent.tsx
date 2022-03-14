@@ -8,19 +8,18 @@ function MainContent(): JSX.Element {
       queueRerenderedWithNumber(["Fizz"]);
     } else if (isBuzz(count)) {
       queueRerenderedWithNumber(["Buzz"]);
-    } else { 
-        queueRerenderedWithNumber([count]);
+    } else {
+      queueRerenderedWithNumber([count]);
     }
-    console.log("the current number is : ",count);
-    console.log("the render number is : ",numberFromRender)
-    count ++;
+    console.log("the current number is : ", count);
+    console.log("the render number is : ", numberFromRender);
+    count++;
   };
-  
 
   return (
     <>
       <h1> FizzBuzz Game</h1>
-      <p>Your Current Number: {count-1}</p>
+      <p>Your Current Number: {count - 1}</p>
       <p> the render number is: {numberFromRender.join()}</p>
       <button onClick={checkFizzBuzz}>Next</button>
       <p>{numberFromRender.map(makeList)}</p>
